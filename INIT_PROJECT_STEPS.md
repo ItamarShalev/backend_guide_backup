@@ -40,3 +40,12 @@ python -m pip install uv
 ```bash
 uv init
 ```
+
+## 3. Remove the .python-version file
+
+We would like to use the Python version specified in the `pyproject.toml` file,
+so we need to remove the `.python-version` file that was created by `uv init`.
+
+```bash
+rm .python-version
+```
