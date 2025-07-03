@@ -1,11 +1,7 @@
-from fastapi.testclient import TestClient
-
-from main import app
-
-client = TestClient(app)
+from httpx import Client
 
 
-def test_root():
+def test_root(client: Client):
     response = client.get("/")
     assert response.status_code == 200
     assert response.json().get("status")
