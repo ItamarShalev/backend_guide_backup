@@ -1,0 +1,50 @@
+
+# Visual Studio Code IDE settings
+.vscode/*
+!.vscode/extensions.json
+
+# JetBrains IDEs (PyCharm, etc.) Settings
+.idea/
+
+# Python virtual environment
+.venv/
+
+# Environment variables
+.env
+
+# database files
+*.db
+
+# pytest
+.cache/
+.pytest_cache/
+
+# ruff
+.ruff_cache/
+
+# Coverage reports
+.coverage
+.coverage.*
+htmlcov/
+*.cover
+
+# Python distribution and packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+*.egg
+
+# Miscellaneous
+.DS_Store
+Thumbs.db
+
+# Logs and local runtime
+*.log
+*.pid
+
+# Python __pycache__ and bytecode
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyc
