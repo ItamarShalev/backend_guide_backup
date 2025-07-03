@@ -1,0 +1,50 @@
+name: CI - Backend
+
+on:
+  push:
+    branches:
+      - main
+      - "test*"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Machine
+        uses: ./.github/actions/setup-machine
+
+      - name: Run Lint
+        run: uv run pre-commit run lint
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Machine
+        uses: ./.github/actions/setup-machine
+
+      - name: Run Tests
+        run: uv run pre-commit run tests
+
+  static-check:
+    name: Static Check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Machine
+        uses: ./.github/actions/setup-machine
+
+      - name: Run Static Check
+        run: uv run pre-commit run static-check
