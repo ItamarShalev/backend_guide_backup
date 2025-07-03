@@ -72,3 +72,15 @@ uv add <package_name> --dev
 ```bash
 uv add <package_name>
 ```
+
+## 6. Check the code before committing
+```bash
+uv run pre-commit run
+```
+
+## 7. Make it automatic
+To automatically run checks before committing, you can set up pre-commit hooks. This is already configured in the `.pre-commit-config.yaml` file.
+To install the pre-commit hooks, run:
+```bash
+uv run pre-commit install
+```

@@ -1,0 +1,30 @@
+repos:
+  - repo: local
+    hooks:
+
+      - id: lint
+        alias: ruff
+        name: "uv run ruff check"
+        entry: uv run ruff check
+        language: system
+        types: [python]
+        pass_filenames: false
+        always_run: true
+
+      - id: static-check
+        alias: ty
+        name: "uv run ty check"
+        entry: uv run ty check
+        language: system
+        types: [python]
+        pass_filenames: false
+        always_run: true
+
+      - id: tests
+        alias: pytest
+        name: "uv run pytest"
+        entry: uv run pytest
+        language: system
+        types: [python]
+        pass_filenames: false
+        always_run: true
