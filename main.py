@@ -3,6 +3,9 @@ from fastapi import FastAPI
 from src.db.database import engine
 from src.db.models import Base
 from src.routers import auth, todos
+from src.utils import Utils
+
+environment = Utils.environment()
 
 Base.metadata.create_all(bind=engine)
 
