@@ -1,0 +1,16 @@
+{
+  "recommendations": [
+    "ms-python.python",
+    "ms-python.debugpy",
+    "ms-python.vscode-pylance",
+    "astral-sh.ty",
+    "charliermarsh.ruff",
+    "tamasfe.even-better-toml",
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "vscode-icons-team.vscode-icons",
+    "qwtel.sqlite-viewer",
+    "ms-azuretools.vscode-containers",
+    "github.vscode-github-actions",
+  ],
+}
