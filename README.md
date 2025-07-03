@@ -32,3 +32,43 @@ python -m pip install uv
 #### Using the installer
 
 [uv official page](https://docs.astral.sh/uv/getting-started/installation/).
+
+## 2. Install Project Dependencies
+
+#### Development Mode
+```bash
+uv sync --dev
+```
+
+## 3. Run the FastAPI Application
+
+```bash
+uv run fastapi dev main.py
+```
+
+## 4. Access the API
+
+Open your browser and go to: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+
+### Swagger UI
+
+The interactive API docs are available at: [http://127.0.0.1:8000/docs](http://127.0.0.1:8000/docs)
+
+### Redoc
+
+The alternative API docs are available at: [http://127.0.0.1:8000/redoc](http://127.0.0.1:8000/redoc)
+
+
+## 5. Add new dependencies
+
+#### For development dependencies
+
+```bash
+uv add <package_name> --dev
+```
+
+#### For production dependencies
+
+```bash
+uv add <package_name>
+```
