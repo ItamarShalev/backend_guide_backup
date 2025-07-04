@@ -2,7 +2,7 @@ from fastapi import APIRouter, Body, Depends, File, HTTPException, Path, Query, 
 from fastapi.security import OAuth2PasswordBearer
 from sqlalchemy.orm import Session
 
-from src.auth_utility import decode_access_token
+from src.auth_utility import AuthUtility
 from src.db.database import get_db
 from src.db.models import Todo, User
 from src.schemas.todos import TodoCreate, TodoOut, TodoUpdate
@@ -15,7 +15,7 @@ def get_current_user(
     token: str = Depends(oauth2_scheme),
     db: Session = Depends(get_db)
 ):
-    username = decode_access_token(token)
+    username = AuthUtility.decode_access_token(token)
     if username is None:
         raise HTTPException(status_code=401, detail="Invalid token")
     user = db.query(User).filter(User.username == username).first()
