@@ -1,0 +1,131 @@
+.todo-card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: all 0.3s ease;
+}
+
+.todo-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.todo-card.completed {
+  opacity: 0.7;
+  background: rgba(200, 230, 200, 0.95);
+}
+
+.todo-content {
+  flex: 1;
+  margin-right: 1rem;
+}
+
+.todo-title {
+  margin: 0 0 0.5rem 0;
+  color: #2d3748;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.todo-description {
+  margin: 0;
+  color: #4a5568;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.todo-actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.complete-btn, .edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+}
+
+.complete-btn {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.complete-btn.completed {
+  background: #48bb78;
+  color: white;
+}
+
+.edit-btn {
+  background: #3182ce;
+  color: white;
+}
+
+.delete-btn {
+  background: #e53e3e;
+  color: white;
+}
+
+.complete-btn:hover, .edit-btn:hover, .delete-btn:hover {
+  transform: scale(1.1);
+}
+
+.edit-form {
+  flex: 1;
+}
+
+.edit-title, .edit-description {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #cbd5e0;
+  border-radius: 6px;
+  margin-bottom: 0.5rem;
+  font-family: inherit;
+}
+
+.edit-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.edit-description {
+  font-size: 0.9rem;
+  resize: vertical;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.save-btn, .cancel-btn {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+}
+
+.save-btn {
+  background: #48bb78;
+  color: white;
+}
+
+.cancel-btn {
+  background: #a0aec0;
+  color: white;
+}
+
+.save-btn:hover, .cancel-btn:hover {
+  transform: translateY(-1px);
+}
